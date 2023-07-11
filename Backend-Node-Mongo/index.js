@@ -6,6 +6,8 @@ import categoriasRouter from "./routes/categorias.routes.js";
 const app = express();
 dotenv.config();
 
+app.use(express.json());
+
 app.use("/categorias", categoriasRouter);
 
 const PORT = process.env.PORT
